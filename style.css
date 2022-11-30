@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --clr-primary-500: hsl(185, 75%, 39%);
+    --clr-primary-600: hsl(227, 10%, 46%);
+    --clr-primary-700: hsl(229, 23%, 23%);
+    --clr-neutral-500: hsl(0, 0%, 59%);
+    --clr-neutral-200: hsla(0, 0%, 59%, 0.3);
+
+    --ff-primary: 'Kumbh Sans', sans-serif;
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --fs-400: 1.125rem;
+
+}
+
+/* CSS RESET */
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+3. Allow percentage-based heights in the application
+*/
+html,
+body {
+    height: 100%;
+}
+
+/*
+Typographic tweaks!
+4. Add accessible line-height
+5. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--ff-primary);
+    background-color: var(--clr-primary-500);
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+/*
+6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+9. Create a root stacking context
+*/
+#root,
+#__next {
+    isolation: isolate;
+}
+
+.bg-top {
+    position: absolute;
+    top: -80%;
+    left: -50%;
+    z-index: -1;
+    min-width: 100%;
+}
+
+.bg-bottom {
+    position: absolute;
+    bottom: -80%;
+    right: -50%;
+    z-index: -1;
+    min-width: 100%;
+}
+
+@media (max-width:500px) {
+    .bg-top {
+        position: absolute;
+        top: 0;
+        left: -50%;
+        z-index: -1;
+        min-width: 100%;
+    }
+
+    .bg-bottom {
+        position: absolute;
+        bottom: 0;
+        right: -50%;
+        z-index: -1;
+        min-width: 100%;
+    }
+}
+
+.container {
+    background-color: white;
+    border-radius: 1rem;
+    margin: 1.5rem;
+    overflow: hidden;
+    max-width: 500px;
+}
+
+.card-header {
+    position: relative;
+}
+
+.bg-pic {
+    min-width: 100%;
+}
+
+.profile-picture {
+    position: absolute;
+    width: 25%;
+    top: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
+
+
+.card-content,
+.card-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.personal-information {
+    margin-top: 4rem;
+    gap: .5rem;
+}
+
+.user-name {
+    font-size: var(--fs-400);
+}
+
+.user-location,
+.user-age {
+    color: var(--clr-primary-600);
+}
+
+.social-stats {
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-top: solid 1px var(--clr-neutral-200);
+    justify-content: space-around;
+}
+
+.stat-title {
+    color: var(--clr-primary-600);
+    font-size: 0.875rem;
+    letter-spacing: .1rem;
+}
+
+.attribution {
+    font-size: 12px;
+    color: white;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 35%, 33%);
+}
